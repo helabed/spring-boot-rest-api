@@ -1,0 +1,32 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.rubywebworks.springboot.quickstart</groupId>
+  <artifactId>course-api</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>Ruby Web Works Courses</name>
+
+
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.3.4.RELEASE</version>
+    <relativePath/> <!-- lookup parent from repository -->
+  </parent>
+
+
+  <dependencies>
+    <dependency>
+	    <groupId>org.springframework.boot</groupId>
+	    <!--  get all the web related jars, one dependency will get
+	          us all the web jars needed, then update project -->
+	    <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+  </dependencies>
+
+  <!-- In our case, the java.version was already at 1.8, but in case
+       you need to explicitly change it, then add the following snippet, and update project -->
+  <properties>
+    <java.version>1.8</java.version>
+  </properties>
+
+</project>
