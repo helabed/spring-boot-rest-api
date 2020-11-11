@@ -4,6 +4,7 @@ package com.rubywebworks.springboot.quickstart.topic;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,5 +19,10 @@ public class TopicController {
                              // caller, in this case the web browser.
   public List<Topic> getAllTopics() {
     return topicService.getAllTopics();
+  }
+
+  @RequestMapping("/topics/{topicId}")
+  public Topic getTopic(@PathVariable("topicId") String id) {
+    return topicService.getTopic(id);
   }
 }
