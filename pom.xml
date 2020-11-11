@@ -6,6 +6,7 @@
   <name>Ruby Web Works Courses</name>
 
 
+  <!-- Our new project, 'course-api' inherits its props and configs from 'spring-boot-starter-parent -->
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
@@ -14,10 +15,11 @@
   </parent>
 
 
+  <!-- List of dependencies that our project needs -->
   <dependencies>
     <dependency>
 	    <groupId>org.springframework.boot</groupId>
-	    <!--  get all the web related jars, one dependency will get
+	    <!--  get all the web related jars, one dependency(below) will get
 	          us all the web jars needed, then update project -->
 	    <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
