@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TopicController {
   
-  @Autowired
+  @Autowired   // marks this instance as needing to be dependency injected into this class.
   private TopicService topicService;
 
   @RequestMapping("/topics") // mapping /topics web url to this method getAllTopics(), defaults to GET method.
