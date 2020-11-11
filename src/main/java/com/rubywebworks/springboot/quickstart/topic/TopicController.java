@@ -14,10 +14,10 @@ public class TopicController {
                              // Spring MVC auto magically converts the List<Topic> into JSON and returns it to the
                              // caller, in this case the web browser.
   public List<Topic> getAllTopics() {
-        return Arrays.asList(
-                     new Topic("spring", "Spring Framework", "Introduction to the Spring Framework"),
-                     new Topic("java", "Core Java", "Introduction to Core Java"),
-                     new Topic("javascript", "Javascript Programming", "Introduction to JavaScript Programming")
-            );
+    return Arrays.asList(
+      new Topic("spring", "Spring Framework", "Introduction to the Spring Framework"),
+      new Topic("java", "Core Java", "Introduction to Core Java"),
+      new Topic("javascript", "Javascript Programming", "Introduction to JavaScript Programming")
+    );
   }
 }
