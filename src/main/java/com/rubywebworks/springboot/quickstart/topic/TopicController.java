@@ -36,4 +36,20 @@ public class TopicController {
   public void addTopic(@RequestBody Topic topic) {
     topicService.addTopic(topic);
   }
+
+  // Example of a curl command to produce a PUT
+  // curl -X PUT -H "Accept: text/json" -H "Content-type: application/json" -d \
+  //   "{\"id\":\"ruby\",\"name\":\"Ruby on Rails\",\"description\":\"Introduction to Ruby on Rails\"}" \
+  //   http://localhost:8080/topics/rub
+  @RequestMapping(method=RequestMethod.PUT, value="/topics/{id}")
+  public void updateTopic(@RequestBody Topic topic, @PathVariable String id) {
+    topicService.updateTopic(id, topic);
+  }
+
+  // Example of a curl command to produce a DELETE
+  // curl -X DELETE -H "Accept: text/json" -H "Content-type: application/json" http://localhost:8080/topics/ruby
+  @RequestMapping(method=RequestMethod.DELETE, value="/topics/{id}")
+  public void deleteTopic(@PathVariable String id) {
+    topicService.deleteTopic(id);
+  }
 }
